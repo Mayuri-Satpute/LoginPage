@@ -1,0 +1,38 @@
+<div class="container">
+    <form (ngSubmit)="Submit()"> // submit is function
+        <label>Username</label>
+        <input type="text" class="form-control" [(ngModel)]="name" name="name"> 
+        <label>Email</label>
+        <input type="email" class="form-control" [(ngModel)]="email" name="email"> 
+     
+        <label>mobileno</label>
+        <input type="text" class="form-control" [(ngModel)]="mobileno" name="mobileno">
+         <button type="submit" class="btn- btn-primary">submit</button>
+      </form>
+      </div>
+
+      <table class="table caption-top" *ngIf="submit">
+        <caption>List of Users</caption>
+        <thead>
+           <tr>
+               <th scope="col">Name</th>// heading of table
+               <th scope="col">Email</th>
+               <th scope="col">mobileno</th>
+               </tr>
+                </thead>
+                   <tbody>
+                     <tr *ngFor="let user of dataArray">
+                        <td>{{user.name}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.mobileno}}</td>
+                         </tr>
+           </tbody>
+    
+    
+    </table>
+    
+    
+    
+      
+
+
